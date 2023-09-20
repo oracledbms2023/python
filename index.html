@@ -10,6 +10,7 @@
     <a href="#2">q2</a>
     <a href="#3"> q3</a>
     <a href="#4">q4</a>
+    <a href="#5">q5</a>
     
     <h4 id="1">LAB PROGRAM 1</h4>
     <pre>
@@ -168,6 +169,143 @@ print(" ")
 #iii every other element, starting at index 1
 print("Access every other elements : ")
 print(x[1::2] )
+
+<h6>lab 4 2 d</h6>
+#i one-dimensions array
+array = np.array([ 2, 4, 6, 8, 10, 12])
+print("One-dimensions array:")
+print(array)
+#ii two-dimensions array
+newarray= np.array([[ 2, 4],[ 6, 8], [10, 12]])
+print("Two-dimensions array:")
+print(newarray)
+#iii three -dimensions array
+array_3= np.array([[[0,1,2],[3,4,5]],[[6,7,8],[9,10,11]]])
+print("Three-dimensions array:")
+print(array_3)
+
+<h6>lab 4 2 e</h6>
+x=np.array([1,2,3])
+y=np.array([3,2,1])
+z=np.array([7,8,9])
+print("concatenate:")
+print(np.concatenate([x, y]))
+print(" ")
+print("vstack: ")
+print(np.vstack([x, z, y]))
+print(" ")
+print("hstack: ")
+print(np.hstack([x,y]))
+
+<h6>lab 4 2 f</h6>
+import numpy as np
+a = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+b = a.reshape(3,4)
+print("Array of shape 3*4 is :")
+print(b)
+print(" ")
+c = b[::2]
+print("Access multiple array element at once :")
+print(c)
+
+    </pre>
+    <h4 id="5">
+        lab program 5
+    </h4>
+    <pre>
+        #create dataframe Sales
+import pandas as pd
+inr2014=[700,2100,1300,878,987]
+inr2015=[700,2100,1310,878,978]
+inr2016=[5000,2100,1350,878,977]
+inr2017=[700,2150,1370,878,987]
+label = ['Kokila','Punith','Rama','Shama','Bahma']
+dic={'2014':inr2014,'2015':inr2015,'2016':inr2016,'2017':inr2017}
+Sales=pd.DataFrame(dic,index=label)
+print(Sales)
+#create dataframe Sales2
+inr2018=[160000,110000,500000,340000,900000]
+label=['Kokila','Punith','Rama','Shama','Bahma']
+dic={'2018':inr2018}
+Sales2=pd.DataFrame(dic,index=label)
+print(Sales2)
+
+<h6> lab 5 1 </h6>
+1. Display the row labels of Sales.
+print(Sales.index)
+
+<h6> lab 5 2 </h6>
+2. Display the column labels of Sales.
+print(Sales.index)
+
+<h6> lab 5 3 </h6>
+3. Display the data types of each column of Sales.
+print(Sales.index)
+
+<h6> lab 5 4 </h6>
+4. Display the dimensions, shape, size and values of Sales.
+print(Sales.ndim)
+print(Sales.shape)
+print(Sales.size)
+print(Sales.values)
+
+<h6> lab 5 5 </h6>
+5. a. Display the last two rows of Sales
+print(Sales.tail(2))
+
+b. Display the first two rows of Sales.
+Source Code:
+print(Sales.head(2))
+
+<h6> lab 5 6</h6>
+6. Display the first two columns of Sales.
+print(Sales[['2014','2015']])
+
+<h6> lab 5 7 </h6>
+7. Check if Sales2 is empty or it contains data.
+print(Sales.empty)
+
+<h6> lab 5 8 </h6>
+8. Append the DataFrame Sales2 to the DataFrame Sales
+print(Sales.T.append(Sales2.T).T)
+
+<h6> lab 5 9 </h6>
+9. Change the DataFrame Sales such that it becomes its transpose.
+print(Sales.T)
+print(Sales)
+
+<h6> lab 5 10 </h6>
+10. Display the sales made by all sales persons in the year 2017.
+print(Sales['2017'])
+
+<h6> lab 5 11</h6>
+11 .Display the sales made by Bahma 2016.
+print(Sales['2016']['Bahma'])
+print(Sales)
+
+<h6> lab 5 12</h6>
+12. Delete the data for the year 2014 from the DataFrame Sales and print the
+remaining DataFrame.
+
+del Sales['2014']
+print(Sales)
+
+<h6> lab 5 13</h6>
+13. Change the name of the salesperson Punith to RajKumar and Rama to
+Krishan.
+
+Sales.rename({'Punith':'Rajkumar','Rama':'Krishan'},axis='index')
+
+<h6> lab 5 14</h6>
+14. Update the sale made by Kokila in 2018 to 100000.
+print(Sales2)
+Sales2['2018']['Kokila']=100000
+print(Sales2)
+
+<h6> lab 5 15</h6>
+15. Display the sales made by Bahma and Shama in the year 2017 and 2018.
+print(Sales)
+print(Sales2)
     </pre>
 </body>
 </html>
