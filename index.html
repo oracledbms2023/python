@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#1"> q1</a>
+    <a href="#2">q2</a>
+    <a href="#3"> q3</a>
+    <a href="#4">q4</a>
+    
+    <h4 id="1">LAB PROGRAM 1</h4>
+    <pre>
+        class student:
+        marks = []
+        def set_data(self,r,n,m1,m2,m3):
+            student. rollno = r
+            student. name = n
+            student. marks.append(m1)
+            student. marks.append(m2)
+            student. marks.append(m3)
+        def total(self):
+            m= student. marks
+            return m[0]+m[1]+m[2]
+        def display_data(self):
+            print("Student Details")
+            print(" ")
+            print("Roll no : ",student. rollno)
+            print("Name : ",student. name)
+            print("Marks : ",self.total())
+            print("********************")
+    r=int(input("Enter the rollno : "))
+    n=input("Enter the name : ")
+    print("********************")
+    m1=int(input("Enter the marks in sub1 : "))
+    m2=int(input("Enter the marks in sub2 : "))
+    m3=int(input("Enter the marks in sub3 : "))
+    S=student()
+    S.set_data(r,n,m1,m2,m3)
+    S.display_data()
+
+    </pre>
+    <h4 id="2">LAB PROGRAM 2</h4>
+    <pre>
+    class Student:
+        def __init__(self, name, rollno, course, year):
+            self.name = name
+            self.rollno = rollno
+            self.course = Course(course, year)
+    
+        def show(self):
+            print(self.name, self.rollno)
+            print(self.course.get())
+    
+    class Course:
+        def __init__(self, name, year):
+            self.name = name
+            self.year = year
+    
+        def get(self):
+            return (self.name, self.year)
+    
+    class Department:
+        def __init__(self, name):
+            self.name = name
+            self.courses = []
+    
+        def get(self):
+            return (self.name, self.courses)
+    
+        def add_courses(self, name):
+            self.courses.append(name)
+    
+        def show_courses(self):
+            print("Courses of this department are given:", self.courses)
+    
+    D1 = Department("BVOC")
+    D2 = Department("Commerce")
+    
+    D1.add_courses("ASD")
+    D1.add_courses("RSCM")
+    D1.add_courses("DMFM")
+    
+    D2.add_courses("HUMAN RESOURCES")
+    D2.add_courses("Marketing")
+    D2.add_courses("Material Management")
+    
+    D1.show_courses()
+    D2.show_courses()
+    
+    print("The list of the courses for the respective Department are given below: Choose the course of your wish")
+    
+    S = Student("Keerthana V.D. Nayak", 201315, "ASD", 2020)
+    S.show() 
+    
+    
+    </pre>
+    <h4 id="3">LAB PROGRAM 3</h4>
+    <pre>
+        <h6> lab 3 a </h6>
+        a = int(input(" Please Enter the number 1 :"))
+        b = int(input(" Please Enter the number 2 :"))
+        try:
+            c=a/b
+            print(" a/b=%d" %c )
+        except Exception as e:
+            print(" You can't divide by zero" )
+        else:
+            print(c)
+
+        <h6> lab 3 b </h6>
+        try:
+            num= int(input(" Enter the number :"))
+            if num less 0:
+                raise ValueError
+        except ValueError as e:
+            print(" Negative integer are not accepted. Please enter Positive integer " )
+        else:
+            print(num)
+
+    </pre>
+    <h4 id="4">LAB PROGRAM 4</h4>
+    <pre>
+<h6>lab 4 1 </h6>
+import numpy as np
+import numpy as np
+x = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+print("Original array:")
+print(x)
+print(" ")
+print("Sum of all elements:")
+print(np.sum(x))
+print(" ")
+print("Sum of each column:")
+print(np.sum(x, axis=0))
+print(" ")
+print("Sum of each row:")
+print(np.sum(x, axis=1))
+
+<h6>lab 4 2 a</h6>
+print("Array of floating point : \n")
+print(np.ones((3, 5)))
+
+<h6>lab 4 2 b</h6>
+array = np.random.randint(10, size=(3, 3))
+print("Array of random integers :\n ")
+print(array)
+
+<h6>lab 4 2 c</h6>
+import numpy as np
+x=np.array([1,2,3,4,5,6,7,8,9,10])
+print("Original array: ")
+print(x)
+print(" ")
+#i Positive and negative indexing on the array
+print("Access element by Positive index :")
+print(x[0])
+print(" ")
+print("Access element by Negative index :")
+print(x[-1])
+print(" ")
+#ii middle subarray of the original array
+print("Middle subarray of the original array:")
+print(x[4:8])
+print(" ")
+#iii every other element, starting at index 1
+print("Access every other elements : ")
+print(x[1::2] )
+    </pre>
+</body>
+</html>
